@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+	<head>
+	</head>
+	<body>
+        <h1>Funksionet</h1>
+		<p id="p1"></p>
+		<script>
+			//Funksioni mund te shenohet me parametra ose edhe pa parametra.
+			
+			//Funksioni pa parametra
+			function mbledh()
+				{
+					return 4+4; //Return perdoret per te na kthyer nje rezultat nga kodi i funksionit
+				}
+				document.getElementById('p1').innerHTML = mbledh(); //Rezultati mund te vendoset edhe ne paragraf.
+				document.write(mbledh()); //Nese nuk thirret funksioni jashte tij, ai nuk ekzekutohet.
+		</script>
+		<br><br>
+		<script>
+            //var x=12;
+			//Funksioni me parametra
+			function a(x,y) //Parametrat mund te thirren edhe si variabla lokale
+				{
+					return x * y; //return gjithashtu perdoret edhe per ta ndaluar se ekzekutuar funksionin.
+				}
+				document.write("hello"+"<br>") //Ne rezultat shfaqet para funksionit.
+				document.write(a(3,4)+'<br>') //Duhet te tregohet edhe emri i funksionit.
+            
+				document.write(a('shtator',4)) //Pyetje???
+		</script>
+			<br>
+			<br>
+		<script>
+			
+			function b(x,y) //Variabla e shenuara si parameter.
+				{
+					var x = 5;   //Variabla brenda funksionit.
+					var y = 7;
+					var z = x + y;
+					return z;
+				}
+                document.write(b()+"<br>");
+				document.write(b(3,4)); 
+            
+            
+            
+            
+            
+            
+            //Nese shenohen edhe parametrat edhe variablat brenda funksionit,vleren me te madhe apo rendesin e kane variablat qe shenohen brenda funksionit.
+		</script>
+        
+        
+        
+        
+		<p>Funksionet vazhdim</p>
+		<script>
+			//Funksionet mund te ruhen edhe brenda nje variable.
+			//Kur funksionet deklarohet me ane te nje vaiable ato nuk marrin emer.
+			
+			var funksioni = function (a,b)
+			{
+				return a * b;
+			}
+			document.write(funksioni(4,5)+'<br>');
+			
+			//Gjithashtu funksionit mund te i marrim rezultatin dhe te e paraqesim si rezultat perfundimtar.
+			
+			function uni(a,b)
+			{
+				return a + b;
+			};
+            //document.write(uni(2,4));
+			var x=uni(5,4);  //Rezultatin e funksionit mund te e vendosim edhe ne nje variabel.
+			document.write(x+'<br>');
+			
+			function prizreni(a,b,c,d)
+			{
+				return arguments.length; //Tregon sa parametra i kemi shenuar ne funksion.
+			};
+			document.write(prizreni(3,3,5,5));
+		</script>
+        
+        
+        
+        
+        
+        
+        
+        
+		<h2>Function scope</h2>
+		<script>
+			//Global scope and Local scope
+			
+			function pz ()
+			{
+				var a = 5; //kjo eshte variabel lokale
+				return a * a;
+			}
+			document.write(pz()+'<br>');
+			 
+			var a = 7;  //kjo eshte variabel globale
+			function pr()  //Funksioni mund te ju qaset edhe variablave jashte funksionit
+			{
+				return a * a;
+			}
+			document.write(pr()+'<br>');
+			
+			//shembull 1
+			var numero =0;
+			function mbledh()
+				{
+					numero += 1;
+					return;
+				}
+				mbledh();
+				mbledh();
+				mbledh();
+				document.write(numero+'<br>');
+				
+			
+			</script>
+			<script>
+			//shembull 2
+			function mbledh1()
+				{
+					var numero1 = 0;
+					numero1 += 1;
+					return numero1;
+				}
+                mbledh1();
+				mbledh1();
+				mbledh1();
+				document.write(mbledh1());
+		</script>
+		<br>
+		<script>
+        //Si duhet te zgjidhet shembulli i dyte?
+			function mbledh()
+				{
+					var x = 0;
+					function shto(){x+=1;}
+					shto();
+					shto();
+					shto();
+					return x;
+				}
+				document.write(mbledh());
+				
+				
+		</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

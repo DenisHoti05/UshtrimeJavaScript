@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Number Method</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var x=123;
+			document.write(x.toString()+10+'<br>');  //e kthen number ne string
+			document.write((123).toString()+10+'<br>');
+			document.write((100+23).toString()+10+'<br>');
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			// The Number() method           E kthen string ne number			
+			document.write(
+				Number(true)+'<br>'+       
+				Number(false)+'<br>'+
+				Number("10")+'<br>'+
+				Number("   10")+'<br>'+
+				Number("10   ")+'<br>'+
+				Number("  10  ")+'<br>'+
+				Number("10.33")+'<br>'+
+				Number("10,33")+'<br>'+
+				Number("10 33")+'<br>'+
+				Number("John"))
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			// parseInt method
+			document.write(
+				parseInt("10")+10+'<br>'+
+				parseInt("10.33")+'<br>'+
+				parseInt("10,33")+'<br>'+  //rrezulltatin e qet numrin e par
+				parseInt("10 6 10")+'<br>'+
+				parseInt("10 yars")+'<br>'+
+				parseInt("years 10")+'<br>') //rrezulltatin per arsye se eshte shkronje nuk e qet
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			// parseFloat method
+			document.write(
+				parseFloat("10")+'<br>'+
+				parseFloat("10.33")+'<br>'+
+				parseFloat("10,33")+'<br>'+
+				parseFloat("10 6")+'<br>'+
+				parseFloat("10 years")+'<br>'+
+				parseFloat("years 10")+'<br>')
+		</script>
+
+	</body>
+</html>

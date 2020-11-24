@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript object</title>
+	</head>
+	<body>
+		<p id="p1"></p>
+		<p id="p2"></p>
+		<script type="text/javascript">
+			var laptopi ={emri:"Gateway",
+				modeli:"NV56R10u",
+				ngjyra:"zeze",
+				pesha:"1.5kg"
+
+			}
+			document.getElementById('p1').innerHTML = "Emri laptopit esht: " + laptopi.emri +"<br>" + "Modeli i laptopit eshte: " + laptopi.modeli +"<br>" + "Ngjyra esht: "+ laptopi.ngjyra +"<br>" + "pesha eshte: " + laptopi.pesha ;
+		</script>
+		<script type="text/javascript">
+			var laptopi ={emri:"Gateway",
+				modeli:"NV56R10u",
+				ngjyra:"zeze",
+				pesha:"1.5kg",
+				lloji: function()
+				{
+					return this.emri + " "+this.modeli+" "+
+					this.ngjyra+" "+this.pesha ;
+				}
+			}
+			document.getElementById('p2').innerHTML=laptopi.lloji();
+		</script>
+		<h2>Konstruktoret e objektit</h2>
+		<script type="text/javascript">
+			function personi(x, y, z)
+			{
+				this.emri = x;
+				this.mbiemri = y;
+				this.mosha = z;
+			}
+			var x = new personi('Denis ', 'Hoti', 14);
+			document.write(x.emri + x.mbiemri + x.mosha + "<br>");
+
+			var y = new personi('Arianit', "Tershnjaku", 35);
+			document.write(y.emri + y.mbiemri + y.mosha + "<br>")
+		</script>
+	</body>
+</html>

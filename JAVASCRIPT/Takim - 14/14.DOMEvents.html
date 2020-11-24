@@ -1,0 +1,160 @@
+<html>
+	<head>
+	</head>
+	<body>
+        <h1>DOM EVENTS</h1>
+        <h3>OnClick</h3>
+		<p id='p1'>Prizren</p>
+		<button onclick='ndrroje()'>Click</button>
+		<script>
+			function ndrroje()
+			{
+				document.getElementById('p1').innerHTML='Prishtine';
+			}
+		</script>
+        <button onclick='text1(this)'>Click2</button>
+		<p onclick='text1(this)'>Prizren</p>
+		<script>
+			function text1(para)
+			{
+				para.innerHTML = 'Prishtine';
+			}
+            //document.write(text1(25))
+		</script>
+        
+        
+        
+        
+        <h3>OnDblClick</h3>
+		<p ondblclick='kliko2(this)' onclick='kliko(this)'>DblClick</p>
+		<script>
+			//ondblclick egzekutohet atehere kur nje element i html klikohet dy here.
+			function kliko2(para)
+			{
+				para.innerHTML ='Click';
+			}
+			function kliko(pas)
+			{
+				pas.innerHTML='DblClick';
+			}
+		</script>
+        
+        
+        
+        <h3>Hide and Show</h3>
+        
+		<p id="p2">Shkolla Digjitale</p>
+		<button onclick='hide1()'>Hide</button>
+		<button onclick='show1()'>Show</button>
+		<script>
+			//Kjo veti na mundeson te e fshehim tekstitn kur e klikojme nje buton te caktuar dhe ta shfaqim prap me nje buton tjeter
+			function hide1()
+			{
+				document.getElementById('p2').style.visibility='hidden';
+			}
+			
+			function show1()
+			{
+				document.getElementById('p2').style.visibility='visible';
+			}
+		</script>
+        
+        
+		<h3>OnMouseOver and OnMouseOut</h3>
+		<h1 onmouseover='over(this)' onmouseout='out(this)'>Mouse out</h1>
+		<script>
+			function over(id1) //Kur e vendosim mausin mbi.
+			{
+				id1.innerHTML='Mouse Over';
+				id1.style.color='red'; 
+				//Pyetje? Si mund qe kur ta vendosim mausin mbi element te ndryshoje edhe ngjyra e tekstit
+			
+			}
+			
+            
+			function out(id1) //Kur e largojme mausin nga elementi.
+			{
+				id1.innerHTML='Mouse Out';
+				id1.style.color='black';
+			}
+		</script>
+        
+        
+        <h3>OnMouseDown and OnMouseUp</h3>
+		<h1 onmousedown='down(this)' onmouseup='up(this)'>Shtype</h1>
+		<script>
+			function down(id)
+			{
+				id.innerHTML='Leshoje';
+				id.style.backgroundColor='red';
+				id.style.width='200px';
+			}
+			
+			function up(id)
+			{
+				id.innerHTML='Shtype';
+				id.style.backgroundColor='white';
+				id.style.width='100%';
+			}
+		</script>
+		<br>
+        <br>
+        
+        <h3>OnFocus</h3>
+        <input type="text" id="inp1" onfocus="input(this)">
+		<script>
+            function input(x) 
+            {
+                x.style.background = "red";
+                x.style.color = "blue";
+            }
+        </script>
+        <br>
+        
+        <h3>OnBlur</h3>
+		<input type="text" id="inp2" onblur="input1()">
+				
+        <script>
+            function input1() 
+            {
+                var x = document.getElementById("inp2");
+                x.value = x.value.toUpperCase();
+            }
+        </script>
+		<br>
+        
+        
+        <h3>OnChange</h3>
+		<select id="s1" onchange="select()">
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Volvo">Volvo</option>
+        </select>
+        
+        <p id="p4"></p>
+        
+		<script>
+            function select() 
+            {
+                var x = document.getElementById("s1").value;
+                document.getElementById("p4").innerHTML = "You selected: " + x;
+            }
+        </script>
+        
+        
+		<h3>ONINPUT</h3>
+		<input type='text'id='input2' oninput='text()' >
+		<p id='para'></p>
+		<script>
+			//ONINPUT vleren qe e shenojme ne nje input mund te e vendosim edhe ne nje element tjeter.
+			function text()
+			{
+				var x = document.getElementById('input2').value;
+				document.getElementById('para').innerHTML = x;
+			}
+			
+		</script>
+
+	</body>
+</html>

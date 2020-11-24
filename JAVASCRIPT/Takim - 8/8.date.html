@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Date</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//new date()
+			var a = new Date()  //Tregon daten aktuale,duke perfshire diten muajin vitin oren dhe minutat,sekonden dhe zonen kohore.
+			document.write(a)
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var a = new Date(2019,2,31,15,13,50);
+			//Nese deshirojme qe te nxerrim nje date te caktuar
+			//duhet pasur kujdes se muajt fllojne nga (0-11).
+			document.write(a)
+		</script>
+		<br>
+		<br>
+		<h1>Date formats</h1>
+		<script type="text/javascript">
+			var a=new Date('2019');
+			document.write(a)
+		</script>
+		<h2>Date Parse</h2>
+		<script type="text/javascript">
+			var msec = Date.parse('mar 31 2020')
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var a=Date.parse('oct 17 2005');
+			var b=Date.parse('mar 31 2020');
+			document.write(b-a);
+		</script>
+		<h2>Get Methods</h2>
+		<script type="text/javascript">
+			var viti=new Date();
+			document.write("Sot eshte viti:"+viti.getFullYear()+'<br>');
+			var muaji= new Date();
+			document.write("Sot eshte muaji: "+muaji.getMonth()+'<br>');
+			var data= new Date();
+			document.write("Sot eshte dita:"+data.getDate()+'<br>');
+			var b=new Date();
+			document.write("Ora eshte:"+b.getHours()+'<br>');
+			var c=new Date();
+			document.write("Minutat jane:"+c.getMinutes()+'<br>');
+			var d=new Date();
+			document.write("Sekondat jane:"+d.getSeconds()+"<br>");
+			var e=new Date();
+			document.write("Milisekondat jane: "+e.getMilliseconds()+'<br>');
+		</script>
+		<br>
+		<br>
+		<h2>Set Methods</h2>
+		<script type="text/javascript">
+			var a=new Date();
+			a.setFullYear(2022);
+			document.write(a+'<br>');
+			var b=new Date();
+			b.setMonth(2);
+			document.write(b+'<br>');
+			var c=new Date();
+			c.setDate(20);
+			document.write(c+'<br>');
+			var d=new Date();
+			d.setHours(22);
+			document.write(d+'<br>');
+			var e=new Date();
+			e.setMinutes(55);
+			document.write(e+'<br>');
+			var f=new Date();
+			f.setSeconds(29);
+			document.write(f+"<br>");
+			var g=new Date();
+			g.setMilliseconds(950);
+			document.write(g+'<br>');
+		</script>
+	</body>
+</html>

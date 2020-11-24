@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Arrays</title>
+	</head>
+	<body>
+		<h2>Array</h2>
+		<script type="text/javascript">
+			var phones=["Iphone","Samsung","Nokia"];  //Forma se si krijohet nje Array
+			document.write(phones);
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var cars = new Array("Mercedes","Audi","BMW"); //Forma tjeter per krijimin e array
+			document.write(cars+'<br>');
+			document.write(cars[1]+'<br>'); //Nxjerr si rrezulltat elementin me index 1
+			document.write(cars.length());    //Tregon gjatesin e Array
+	</script>
+		<br>
+		<br>
+
+		<!--ME DATE 03/20/2020                  MSIMI ONLINE-->
+		
+
+		<br>
+		<br>
+
+		<script type="text/javascript">
+			var phones=["Iphone","Samsung","Nokia"]; //Forma se si rijohet nje array
+			document.write(phones+'<br>');
+			document.write(phones[1]+"<br>");
+			document.write(phones.length);
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var cars = new Array("Mercedes","Audi","BMW");  //form tjeterper krijimin e nje Array
+			document.write(cars+'<br>');
+			document.write(cars[cars.length-1]+'<br>')  //Nxjerr si rrezultat elementin me index 2
+			document.write(cars.length);
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var phones =["Iphone","Samsung","Nokia"];
+			phones.pop()  //per largimin e nje elementi nga fundi i array
+			document.write(phones);
+
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var phones =["Iphone","Samsung","Nokia"]
+			phones.push(htc);// e perdorim per te vendosur nje element ne fund te array
+			document.write(phones);
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var phones =['Iphone',"Samsung","Nokia","htc"];
+			phones.shift()  //per largimin e nje elementi ne fillim te array
+			document.write(phones);
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var phones =['Iphone',"Samsung","Nokia","htc"];
+			phones.unshift("Lenovo")  //per shtimin e nje elementi ne fillim te array
+			document.write(phones);
+			var x=phones
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			//ndryshimi i nje elementi
+			var phones=['Iphone',"Samsung","Nokia","htc"];
+			delete phones[0];  //per fshirjen e nje elementi te array
+			document.write(phones)
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var phones=['Iphone',"Samsung","Nokia","htc"];
+			phones.splice(2,1,,"vivo","xiamo"); //parametri i pare tregone ku do te vendosen vlerat
+			document,write(phones); //parametri i dyte vendoset per ti hekur sa elemente
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var phones=['Iphone',"Samsung","Nokia","htc"];
+			var phones1=['Iphone',"Samsung","Nokia","htc"];
+			var smart=phones.concat(phones1) //mund te bashkoje dy ose me shume elemente
+			document.write(smart);
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>StringMethod</title>
+	</head>
+	<body>
+		<!--KARAKTERET SPECIALE-->
+		<script type="text/javascript">
+			var x="Shkolla digjitale 'Prizren'";   //te njefishta
+			document.write(x+"<br>");
+			var y='Shkolla digjitale "Prizren"';   //te dyfishta
+			document.write(y+"<br>");
+			var z="Shkolla digjitale \" Prizren\".";
+			document.write(z+"<br>");
+			var a="Shkolla digjitale \\ Prizren\.";
+			document.write(a+"<br>");
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			//LENGTH e gjen gjatesin e nje stringu te caktuar
+			var emri='Denis'
+			document.write(emri.length+"<br>");
+			//IndexOf()e gjen pozicionin e fjales qe e kemi kerkuar
+			var mbiemri='Denis Hoti Ratkoc';
+			var pozicioni=mbiemri.indexOf('Hoti');
+			document.write(pozicioni+'<br>');
+			//lastIndexOf() e gjejme pozicionin e fjales se fundit qe e kemi kerkuar
+			var mbiemri2='Denis Hoti Ratkoc Hoti';
+			var pozicioni2=mbiemri2.lastIndexOf('Hoti');
+			document.write(pozicioni2+'<br>');
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			//search() method
+			var a='Denis Hoti Ratkoc';
+			var b=a.search('o');
+			document.write(b+'<br>')
+			//charAt method
+			var e='Denis Hoti Ratkoc';
+			var f=e.charAt(4);
+			document.write(f+'<br>');
+			//charCodeAt method
+			var g='Denis Hoti Ratkoc'
+			var h=g.charCodeAt(8)
+			document.write(h+'<br>');
+		</script>
+		<br>
+		<br>
+		<script type="text/javascript">
+			var a='Denis Hoti Ratkoc';
+			var b=a.slice(3,9);
+			document.write(b+'<br>');   //Duhet te i caktohen dy parametra 
+			//fillon numerimin nga 0 
+			var c='Denis Hoti Ratkoc' ;
+			var d=c.slice(-10,-4);
+			//Mund te caktohen edhe vlera negative,por ato fillojne nga fundi
+		</script>
+		<br>
+		<script type="text/javascript">
+			var a='Denis Hoti Ratkoc';
+			var b=a.substring(10,13); //Mese nuk e shenojme vleren e fundit atehere e merr tekstin deri ne fund
+			document.write(b+'<br>');	 
+		</script>
+		<br>
+		<script type="text/javascript">
+			var a='Denis Hoti Ratkoc';
+			var b=a.substr(10,5);
+			document.write(b+'<br>');
+		</script>
+		<br>
+		<button onclick="document.getElementById('p1').innerHTML=txt;">Kliko</button>
+		<button onclick="document.getElementById('p1').innerHTML=txt1;">Kliko1</button>
+		<p id="p1">Denis Hoti Ratkoc</p>
+		<script type="text/javascript">
+			//replace()
+			var str=document.getElementById("p1").innerHTML;
+			var txt=str.replace("Ratkoc","Prizren");
+			var txt1=txt.replace("Prizren","Ratkoc");
+		</script>
+		<br>
+		<script type="text/javascript">
+			//tolowercase() method
+			var a="Denis Hoti Ratkoc";
+			var b=a.toLowerCase();
+			document.write(b+'<br>');
+		</script>
+		<br>
+		<script type="text/javascript">
+			//toUpperCase() method
+			var a="Denis Hoti Ratkoc";
+			var b=a.toUpperCase();
+			document.write(b+'<br>');
+		</script>
+	</body>
+</html>
